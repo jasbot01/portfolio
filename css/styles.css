@@ -1,0 +1,322 @@
+:root {
+    --bg: #FFF0F1;
+    --paper: #FFCAE9;
+    --paper-soft: #F4DBE9;
+    --sidebar-bg: #FFEDE4;
+    --chip-bg: #C4C7E2;
+    --nav-hover: #eef5ff;
+    --note-bg: #dcecff;
+
+    --ink: #1f2937;
+    --muted: #667085;
+
+    --accent: #356fd6;
+    --accent-bg: #356fd6;
+    --accent-text: #000000;
+    --teal-bg: #FA9BCF;
+    --gold: #d8a43f;
+
+    --line: rgba(31, 41, 55, 0.18);
+    --line-strong: rgba(31, 41, 55, 0.3);
+    --grid-line: rgba(31, 41, 55, 0.05);
+    --shadow: 0 12px 30px rgba(31, 41, 55, 0.08);
+
+    color-scheme: light;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    background: var(--bg);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.site-shell {
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    min-height: 100vh;
+}
+
+.sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    padding: 2rem 1.25rem;
+    border-right: 1px solid var(--line-strong);
+    background: var(--sidebar-bg);
+}
+
+.theme-toggle {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 0.8rem;
+    color: var(--ink);
+    background: var(--paper);
+    font: inherit;
+    font-weight: 300;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+}
+
+.theme-toggle:hover {
+    border-color: var(--accent);
+    background: var(--nav-hover);
+}
+
+.site-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    color: var(--ink);
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.logo-mark {
+    display: grid;
+    width: 2.75rem;
+    height: 2.75rem;
+    place-items: center;
+    border-radius: 0.85rem;
+    color: var(--accent-text);
+    background: var(--accent-bg);
+}
+
+.sidebar-nav {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.nav-link {
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 0.9rem;
+    color: var(--ink);
+    background: var(--paper);
+    text-decoration: none;
+    box-shadow: var(--shadow);
+    transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.nav-link:hover {
+    transform: translateX(0.25rem);
+    border-color: var(--accent);
+    background: var(--nav-hover);
+}
+
+.nav-link.active {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--nav-hover);
+    font-weight: 600;
+}
+
+.sidebar-note {
+    margin-top: 3rem;
+    padding: 1rem;
+    rotate: -2deg;
+    border-radius: 0.35rem;
+    color: var(--ink);
+    background: var(--note-bg);
+    box-shadow: var(--shadow);
+    line-height: 1.7;
+}
+
+.main-content {
+    display: grid;
+    gap: 1.25rem;
+    padding: 2rem;
+    background-color: var(--bg);
+    background-image:
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+.section {
+    scroll-margin-top: 2rem;
+    padding: 2rem;
+    border: 1px solid var(--line-strong);
+    border-radius: 1.25rem;
+    color: var(--ink);
+    background: var(--paper-soft);
+    box-shadow: var(--shadow);
+}
+
+.hero-section {
+    display: grid;
+    grid-template-columns: 12rem 1fr;
+    align-items: center;
+    gap: 2rem;
+    min-height: 20rem;
+}
+
+.profile-photo {
+    width: 12rem;
+    aspect-ratio: 1;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: var(--note-bg);
+}
+
+.profile-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.eyebrow {
+    margin: 0 0 0.5rem;
+    color: var(--accent);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 0.5rem;
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    line-height: 1;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.button-row,
+.tag-row,
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: 0 1rem;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.button.primary {
+    color: var(--accent-text);
+    background: var(--accent-bg);
+}
+
+.button.secondary {
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    background: transparent;
+}
+
+.section-header {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.text-link {
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.project-card {
+    padding: 1.25rem;
+    border: 1px solid var(--line);
+    border-radius: 1rem;
+    color: var(--ink);
+    background: var(--paper);
+}
+
+.project-icon {
+    display: grid;
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    place-items: center;
+    border-radius: 0.8rem;
+    color: #ffffff;
+    background: var(--teal-bg);
+    font-weight: 800;
+}
+
+.tag-row span,
+.skill-list span {
+    padding: 0.4rem 0.7rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--ink);
+    background: var(--chip-bg);
+    font-size: 0.9rem;
+}
+
+.goal-list {
+    padding-left: 1.25rem;
+}
+
+@media (max-width: 900px) {
+    .site-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+        height: auto;
+    }
+
+    .sidebar-nav {
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+
+    .nav-link {
+        min-width: max-content;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+
+    .hero-section,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-photo {
+        width: 9rem;
+    }
+}
