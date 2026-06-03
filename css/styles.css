@@ -1,28 +1,39 @@
 :root {
-    --bg: #FFF0F1;
-    --paper: #FFCAE9;
-    --paper-soft: #F4DBE9;
-    --sidebar-bg: #FFEDE4;
-    --chip-bg: #C4C7E2;
-    --nav-hover: #eef5ff;
-    --note-bg: #dcecff;
+  /* Base */
+  --bg: #E9B796;
+  --paper: #D8D0CD;
+  --paper-soft: #aacbdc;
 
-    --ink: #1f2937;
-    --muted: #667085;
+  /* Navigation / Layout */
+  --sidebar-bg: #aacbdc;
+  --chip-bg: #E9B796;
+  --nav-hover: #E9B796;
+  --note-bg: rgba(0, 255, 234, 0.15);
 
-    --accent: #356fd6;
-    --accent-bg: #356fd6;
-    --accent-text: #000000;
-    --teal-bg: #FA9BCF;
-    --gold: #d8a43f;
+  /* Typography */
+  --ink: #962E2A;
+  --muted: #8f2626;
 
-    --line: rgba(31, 41, 55, 0.18);
-    --line-strong: rgba(31, 41, 55, 0.3);
-    --grid-line: rgba(31, 41, 55, 0.05);
-    --shadow: 0 12px 30px rgba(31, 41, 55, 0.08);
+  /* Brand Colors */
+  --accent: #962E2A;
+  --accent-bg: #C7395F;
+  --accent-text: #E2BAE6;
 
-    color-scheme: light;
+  /* Secondary Accent */
+  --teal-bg: #962E2A;
+  --gold: #ff0000;
+
+  /* Borders & Effects */
+  --line: rgba(199, 57, 95, 0.18);
+  --line-strong: rgba(222, 212, 232, 0.25);
+  --grid-line: rgba(222, 212, 232, 0.08);
+
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+
+  color-scheme: light;
 }
+
+
 
 * {
     box-sizing: border-box;
